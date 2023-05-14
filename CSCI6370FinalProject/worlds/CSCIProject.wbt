@@ -1,0 +1,553 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/road/protos/CurvedRoadSegment.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/road/protos/StraightRoadSegment.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/vehicles/protos/tesla/TeslaModel3.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/devices/sick/protos/SickLms291.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/road/protos/RoadLine.proto"
+
+WorldInfo {
+  ERP 0.6
+  basicTimeStep 10
+  FPS 80
+  contactProperties [
+    ContactProperties {
+      material2 "TeslaModel3Wheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+    }
+  ]
+}
+Viewpoint {
+  fieldOfView 1.5
+  orientation -0.5056622021482121 0.17303910503472403 0.8452000978747 2.5785096555856146
+  position 36.02004163802504 -39.68630785733129 42.51437989507082
+  exposure 2
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+CurvedRoadSegment {
+  translation 20 0 0.03
+}
+CurvedRoadSegment {
+  translation 20 20 0.03
+  rotation 0 0 1 3.141592653589793
+  name "road(2)"
+}
+CurvedRoadSegment {
+  translation 20 20 0.04
+  rotation 0 0 1 1.5707903061004251
+  name "road(3)"
+}
+CurvedRoadSegment {
+  translation 20 -40 0.03
+  rotation 0 0 1 -1.5708003061004252
+  name "road(8)"
+}
+StraightRoadSegment {
+  translation -20 0 0.03
+  rotation 0 0 1 1.5708003061004252
+  name "road(20)"
+}
+StraightRoadSegment {
+  translation -20 -10 0.03
+  rotation 0 0 1 1.5708003061004252
+  name "road(16)"
+}
+StraightRoadSegment {
+  translation -20 -20 0.03
+  rotation 0 0 1 1.5708003061004252
+  name "road(17)"
+}
+StraightRoadSegment {
+  translation -20 -30 0.03
+  rotation 0 0 1 1.5708003061004252
+  name "road(18)"
+}
+StraightRoadSegment {
+  translation -20 -40 0.03
+  rotation 0 0 1 1.5708003061004252
+  name "road(19)"
+}
+TeslaModel3 {
+  translation 30.996648820493398 -19.587639125980477 0.17367053846579905
+  rotation 0.014088755285645781 -0.008718243216565445 0.9998627401847305 1.5791722231547423
+  color 0.4 1 1
+  name "vehicle(0)"
+  controller "Cooperative_Driving"
+  sensorsSlotFront [
+    DistanceSensor {
+    }
+    SickLms291 {
+      translation 0.06 0 0
+    }
+  ]
+  sensorsSlotTop [
+    Camera {
+      translation 1.03 0 -0.05
+      rotation 0 1 0 0.26
+      children [
+        Transform {
+          translation -0.05 0 0
+          rotation 0 -1 0 1.5708
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0.8 0.8
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.1
+                radius 0.04
+              }
+            }
+          ]
+        }
+      ]
+      fieldOfView 1.1
+      width 300
+    }
+  ]
+  sensorsSlotCenter [
+    Display {
+      width 200
+      height 150
+    }
+    Gyro {
+    }
+    GPS {
+    }
+  ]
+  window "<none>"
+}
+StraightRoadSegment {
+  translation -20 10 0.03
+  rotation 0 0 1 1.5708003061004252
+  name "road(21)"
+}
+TeslaModel3 {
+  translation 31.0966 -40 0.273671
+  rotation 0.014088755285645781 -0.008718243216565445 0.9998627401847305 1.5791722231547423
+  color 0.4 0.3 1
+  name "vehicle(1)"
+  controller "Cooperative_Driving"
+  sensorsSlotFront [
+    DistanceSensor {
+    }
+    SickLms291 {
+      translation 0.06 0 0
+    }
+  ]
+  sensorsSlotTop [
+    Camera {
+      translation 1.03 0 -0.05
+      rotation 0 1 0 0.26
+      children [
+        Transform {
+          translation -0.05 0 0
+          rotation 0 -1 0 1.5708
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0.8 0.8
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.1
+                radius 0.04
+              }
+            }
+          ]
+        }
+      ]
+      fieldOfView 1.1
+      width 300
+    }
+  ]
+  sensorsSlotCenter [
+    Display {
+      width 200
+      height 150
+    }
+    Gyro {
+    }
+    GPS {
+    }
+  ]
+  window "<none>"
+}
+TeslaModel3 {
+  translation 15 -52 0.373671
+  color 0.9 0.4 0
+  name "vehicle(2)"
+  controller "Cooperative_Driving"
+  sensorsSlotFront [
+    DistanceSensor {
+    }
+    SickLms291 {
+      translation 0.06 0 0
+    }
+  ]
+  sensorsSlotTop [
+    Camera {
+      translation 1.03 0 -0.05
+      rotation 0 1 0 0.26
+      children [
+        Transform {
+          translation -0.05 0 0
+          rotation 0 -1 0 1.5708
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0.8 0.8
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.1
+                radius 0.04
+              }
+            }
+          ]
+        }
+      ]
+      fieldOfView 1.1
+      width 300
+    }
+  ]
+  sensorsSlotCenter [
+    Display {
+      width 200
+      height 150
+    }
+    Gyro {
+    }
+    GPS {
+    }
+  ]
+  window "<none>"
+}
+StraightRoadSegment {
+  translation -20 20 0.03
+  rotation 0 0 1 1.5708003061004252
+  name "road(22)"
+}
+TeslaModel3 {
+  translation -10 -51 0.473671
+  color 0.9 1 0
+  name "vehicle(3)"
+  controller "Cooperative_Driving"
+  sensorsSlotFront [
+    DistanceSensor {
+    }
+    SickLms291 {
+      translation 0.06 0 0
+    }
+  ]
+  sensorsSlotTop [
+    Camera {
+      translation 1.03 0 -0.05
+      rotation 0 1 0 0.26
+      children [
+        Transform {
+          translation -0.05 0 0
+          rotation 0 -1 0 1.5708
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0.8 0.8
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.1
+                radius 0.04
+              }
+            }
+          ]
+        }
+      ]
+      fieldOfView 1.1
+      width 300
+    }
+  ]
+  sensorsSlotCenter [
+    Display {
+      width 200
+      height 150
+    }
+    Gyro {
+    }
+    GPS {
+    }
+  ]
+  window "<none>"
+}
+TeslaModel3 {
+  translation -22 -2 0.573669
+  rotation 0 0 1 -1.4399003061004252
+  color 0.9 1 0
+  name "vehicle(5)"
+  controller "Cooperative_Driving"
+  sensorsSlotFront [
+    DistanceSensor {
+    }
+    SickLms291 {
+      translation 0.06 0 0
+    }
+  ]
+  sensorsSlotTop [
+    Camera {
+      translation 1.03 0 -0.05
+      rotation 0 1 0 0.26
+      children [
+        Transform {
+          translation -0.05 0 0
+          rotation 0 -1 0 1.5708
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0.8 0.8
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.1
+                radius 0.04
+              }
+            }
+          ]
+        }
+      ]
+      fieldOfView 1.1
+      width 300
+    }
+  ]
+  sensorsSlotCenter [
+    Display {
+      width 200
+      height 150
+    }
+    Gyro {
+    }
+    GPS {
+    }
+  ]
+  window "<none>"
+}
+StraightRoadSegment {
+  translation -20 30 0.03
+  rotation 0 0 1 1.5708003061004252
+  name "road(25)"
+}
+TeslaModel3 {
+  translation -21.9 26 0.673669
+  rotation 0 0 1 -1.4399003061004252
+  color 0.9 1 0
+  name "vehicle(6)"
+  controller "Cooperative_Driving"
+  sensorsSlotFront [
+    DistanceSensor {
+    }
+    SickLms291 {
+      translation 0.06 0 0
+    }
+  ]
+  sensorsSlotTop [
+    Camera {
+      translation 1.03 0 -0.05
+      rotation 0 1 0 0.26
+      children [
+        Transform {
+          translation -0.05 0 0
+          rotation 0 -1 0 1.5708
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0.8 0.8
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.1
+                radius 0.04
+              }
+            }
+          ]
+        }
+      ]
+      fieldOfView 1.1
+      width 300
+    }
+  ]
+  sensorsSlotCenter [
+    Display {
+      width 200
+      height 150
+    }
+    Gyro {
+    }
+    GPS {
+    }
+  ]
+  window "<none>"
+}
+TeslaModel3 {
+  translation -22 -30 0.573671
+  rotation 0 0 1 -1.4398996938995747
+  color 0.9 1 0
+  name "vehicle(4)"
+  controller "Cooperative_Driving"
+  sensorsSlotFront [
+    DistanceSensor {
+    }
+    SickLms291 {
+      translation 0.06 0 0
+    }
+  ]
+  sensorsSlotTop [
+    Camera {
+      translation 1.03 0 -0.05
+      rotation 0 1 0 0.26
+      children [
+        Transform {
+          translation -0.05 0 0
+          rotation 0 -1 0 1.5708
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0.8 0.8
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.1
+                radius 0.04
+              }
+            }
+          ]
+        }
+      ]
+      fieldOfView 1.1
+      width 300
+    }
+  ]
+  sensorsSlotCenter [
+    Display {
+      width 200
+      height 150
+    }
+    Gyro {
+    }
+    GPS {
+    }
+  ]
+  window "<none>"
+}
+StraightRoadSegment {
+  translation 20 -50 0.03
+  rotation 0 0 1 3.141592653589793
+  name "road(9)"
+}
+StraightRoadSegment {
+  translation 20 50 0.03
+  rotation 0 0 1 3.141592653589793
+  name "road(12)"
+}
+StraightRoadSegment {
+  translation 10 50 0.03
+  rotation 0 0 1 3.141592653589793
+  name "road(13)"
+}
+StraightRoadSegment {
+  translation 0 50 0.03
+  rotation 0 0 1 3.141592653589793
+  name "road(23)"
+}
+StraightRoadSegment {
+  translation 10 -50 0.03
+  rotation 0 0 1 3.141592653589793
+  name "road(10)"
+}
+StraightRoadSegment {
+  translation 0 -50 0.03
+  rotation 0 0 1 3.141592653589793
+  name "road(14)"
+}
+StraightRoadSegment {
+  translation 30 -20 0.03
+  rotation 0 0 1 1.5708003061004252
+  name "road(5)"
+}
+StraightRoadSegment {
+  translation 30 -30 0.03
+  rotation 0 0 1 1.5708003061004252
+  name "road(6)"
+}
+StraightRoadSegment {
+  translation 30 -10 0.03
+  rotation 0 0 1 1.5708003061004252
+  name "road(1)"
+}
+StraightRoadSegment {
+  translation 30 -40 0.03
+  rotation 0 0 1 1.5708003061004252
+  name "road(7)"
+}
+CurvedRoadSegment {
+  translation 20 40 0.04
+  rotation 0 0 1 -1.5707996938995747
+  name "road(4)"
+  lines [
+    RoadLine {
+      width 0.25
+    }
+  ]
+  totalAngle 1.5707
+}
+CurvedRoadSegment {
+  translation -10 -40 0.03
+  rotation 0 0 1 -3.141592653589793
+  name "road(15)"
+}
+CurvedRoadSegment {
+  translation -10 40 0.03
+  rotation 0 0 1 1.5707950010791611
+  name "road(24)"
+}
+CurvedRoadSegment {
+  translation 20 40 0.04
+  name "road(11)"
+}
+DEF GROUND Solid {
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        baseColorMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/vehicles/worlds/textures/ground.jpg"
+          ]
+        }
+        roughness 0.5
+        metalness 0
+        textureTransform TextureTransform {
+          scale 500 500
+        }
+      }
+      geometry DEF GROUND_PLANE Plane {
+        size 2000 2000
+      }
+    }
+  ]
+  boundingObject USE GROUND_PLANE
+  locked TRUE
+}
